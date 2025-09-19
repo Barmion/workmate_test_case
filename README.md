@@ -10,12 +10,12 @@ source venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-Выполните скрипт performance_analyzer.main с указанием аргументов --files (пусть к файлу csv, можно указать несколько через пробел) и --report (название отчета)
+Перейдите в каталог /performance_analyzer и выполните скрипт main.py с указанием аргументов --files (пусть к файлу csv, можно указать несколько через пробел) и --report (название отчета)
 
 ## Пример запуска
-Находясь в корневом каталоге выполните команду
+Находясь в каталоге /performance_analyzer выполните команду
 ```
-python -m performance_analyzer.main --files data/students1.csv data/students2.csv --report student-performance
+python main.py --files data/students1.csv data/students2.csv --report student-performance
 ```
 Пример вывода
 ![Пример вывода](/example.JPG)
