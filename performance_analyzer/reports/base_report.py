@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from performance_analyzer.utils import PerfomanceRecord
+from utils import PerfomanceRecord
 
 
 class BaseReport(ABC):

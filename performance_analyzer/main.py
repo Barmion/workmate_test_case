@@ -1,7 +1,7 @@
 import argparse
 
-from performance_analyzer.reports import get_report_class
-from performance_analyzer.utils import read_csv_files
+from reports import get_report_class
+from utils import read_csv_files
 
 
 def parse_script_args() -> argparse.ArgumentParser:
