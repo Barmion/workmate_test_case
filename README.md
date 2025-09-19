@@ -22,4 +22,4 @@ python -m performance_analyzer.main --files data/students1.csv data/students2.cs
 
 ## Как добавить новый отчет
 1. В каталоге performance_analyzer/reports создайте новый python-файл для отчета. Создайте класс, отнаследовавшись от класса BaseReport из файла performance_analyzer/reports/base_report.py. Реализуйте в своем классе методы get_report (формирование отчета из преобразованного csv-файла) и print_report (вывод отчета в терминал).
-2. В файл performance_analyzer/reports/\__init__.py импортируйте свой класс, в словарь _REPORTS добавьте свой класс.
+2. В файл performance_analyzer/reports/\_\_init__.py импортируйте свой класс, в словарь _REPORTS добавьте свой класс.
