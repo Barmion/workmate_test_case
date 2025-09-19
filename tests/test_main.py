@@ -7,7 +7,7 @@ def test_main_with_real_files(capsys, multiple_csv_path):
     """Main отрабатывает корректно."""
     with pytest.MonkeyPatch().context() as m:
         m.setattr('sys.argv', [
-            '-m performanse_analizer.main',
+            'main.py',
             '--files', *map(str, multiple_csv_path),
             '--report', 'student-performance'
         ])
@@ -25,7 +25,7 @@ def test_main_file_not_found(capsys):
     """Ошибка при указании несуществующего файла."""
     with pytest.MonkeyPatch().context() as m:
         m.setattr('sys.argv', [
-            '-m performanse_analizer.main',
+            'main.py',
             '--files', 'wrong.csv',
             '--report', 'student-performance'
         ])
@@ -41,7 +41,7 @@ def test_main_wrong_report(capsys, multiple_csv_path):
     """Ошибка при указании несуществующего отчета."""
     with pytest.MonkeyPatch().context() as m:
         m.setattr('sys.argv', [
-            '-m performanse_analizer.main',
+            'main.py',
             '--files', *map(str, multiple_csv_path),
             '--report', 'wrong-report'
         ])
@@ -56,7 +56,7 @@ def test_main_wrong_report(capsys, multiple_csv_path):
 def test_main_missing_arguments():
     """Ошибка, если не указать аргументы."""
     with pytest.MonkeyPatch().context() as m:
-        m.setattr('sys.argv', ['-m performanse_analizer.main',])
+        m.setattr('sys.argv', ['main.py',])
 
         with pytest.raises(SystemExit):
             main()

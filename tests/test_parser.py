@@ -8,7 +8,7 @@ from performance_analyzer.main import parse_script_args
 @patch(
     'sys.argv',
     [
-        '-m performanse_analizer.main',
+        'main.py',
         '-f', 'data/students1.csv',
         '-r', 'student-performance',
     ]
@@ -23,7 +23,7 @@ def test_parse_short_args():
 @patch(
     'sys.argv',
     [
-        '-m performanse_analizer.main',
+        'main.py',
         '--files', 'data/students1.csv',
         '--report', 'student-performance',
     ]
@@ -38,7 +38,7 @@ def test_parse_full_args():
 @patch(
     'sys.argv',
     [
-        '-m performanse_analizer.main',
+        'main.py',
         '-r', 'student-performance',
     ]
 )
@@ -51,7 +51,7 @@ def test_parse_no_files_args():
 @patch(
     'sys.argv',
     [
-        '-m performanse_analizer.main',
+        'main.py',
         '-f', 'data/students1.csv',
     ]
 )
@@ -64,7 +64,7 @@ def test_parse_no_report_args():
 @patch(
     'sys.argv',
     [
-        '-m performanse_analizer.main',
+        'main.py',
         '-f', 'data/students1.csv',
         '-r', 'student-performance', 'student-performance',
     ]
@@ -78,7 +78,7 @@ def test_parse_multiple_report_args():
 @patch(
     'sys.argv',
     [
-        '-m performanse_analizer.main',
+        'main.py',
         '-f', 'performanse_analizer/data/students1.csv',
               'performanse_analizer/data/students2.csv',
         '-r', 'student-performance',
